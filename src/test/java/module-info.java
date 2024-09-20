@@ -3,4 +3,5 @@ module com.juancnuno.yearsworthofexpenses.test {
     requires com.juancnuno.ynab;
 
     requires org.junit.jupiter.api;
+    requires org.mockito;
 }
