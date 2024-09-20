@@ -13,7 +13,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>17</maven.compiler.release>
+    <maven.compiler.release>23</maven.compiler.release>
   </properties>
 
   <dependencyManagement>
@@ -83,6 +83,21 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.6.1</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.4.1</version>
+          <configuration>
+            <executable>java</executable>
+            <arguments>
+              <argument>-p</argument>
+              <modulepath/>
+              <argument>-m</argument>
+              <argument>com.juancnuno.yearsworthofexpenses/com.juancnuno.yearsworthofexpenses.YearsWorthOfExpenses</argument>
+            </arguments>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
